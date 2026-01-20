@@ -1,0 +1,39 @@
+.toast-container {
+  position: relative;
+
+  .toast {
+    border: 1px black solid;
+    border-radius: 0.5rem;
+    z-index: 995;
+    padding: 1rem;
+    margin: 1rem;
+    box-shadow: 0 0 15px gray;
+
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    .toast-title {
+      h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+    }
+
+    &.error {
+      background-color: #e5113f;
+    }
+
+    &.success {
+      background-color: #18ca07;
+    }
+
+    &.warning {
+      background-color: #86b7fe;
+    }
+
+    &.info {
+      background-color: goldenrod;
+    }
+  }
+}
