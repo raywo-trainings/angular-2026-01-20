@@ -1,24 +1,7 @@
-enum PortionUnits {
-  NONE = '',
-  GRAM = 'g',
-  CUBE = 'Würfel',
-  MILLILITER = 'ml',
-  TEASPOON = 'TL',
-  TABLESPOON = 'EL',
-  BALL = 'Kugel',
-  PINCH = 'Prise',
-}
+import {Difficulty} from '../app/recipes/models/difficulty.model';
+import {PortionUnits} from '../app/recipes/models/portion-units.model';
+import {TimeUnit} from '../app/recipes/models/time-unit.model';
 
-enum TimeUnit {
-  MINUTES = 'Min.',
-  HOURS = 'Std.',
-}
-
-enum Difficulty {
-  EASY = 'Einfach',
-  MEDIUM = 'Mittel',
-  HARD = 'Schwer'
-}
 
 export const recipes = [
   {
