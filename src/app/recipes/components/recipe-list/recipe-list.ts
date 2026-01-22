@@ -16,6 +16,7 @@ export class RecipeList implements OnInit {
 
   protected readonly dataService = inject(RecipeData);
   protected recipes = signal<Recipe[]>([]);
+  protected error = signal<string | null>(null);
 
 
   public ngOnInit() {
@@ -37,7 +38,16 @@ export class RecipeList implements OnInit {
 
   private fetchAllRecipes() {
     this.dataService.getAllRecipes()
-      .subscribe(recipes => this.recipes.set(recipes));
+      .subscribe({
+        next: recipes => {
+          this.error.set(null);
+          this.recipes.set(recipes)
+        },
+        error: error => {
+          this.error.set("Liste konnte nicht geladen werden, weil der Server nicht erreichbar ist.");
+          console.error('Error fetching recipes:', error)
+        }
+      });
   }
 
 }

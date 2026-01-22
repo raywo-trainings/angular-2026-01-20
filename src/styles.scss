@@ -121,3 +121,16 @@ main {
 .nav-headline {
   padding-left: 1rem;
 }
+
+.alert {
+  padding: 1rem;
+  margin-block: 1rem;
+
+  border-radius: 0.5rem;
+  border: 1px solid;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}

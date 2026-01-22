@@ -1,0 +1,469 @@
+{
+  "recipes": [
+    {
+      "id": "1",
+      "name": "Pizza",
+      "img": "/recipe_pictures/default.jpg",
+      "portions": 4,
+      "lastEdited": "2024-11-06T15:07:39.516Z",
+      "ingredients": [
+        {
+          "name": "Weizenmehl Type 550",
+          "unit": "g",
+          "quantity": 200
+        },
+        {
+          "name": "Hartweizengrieß",
+          "unit": "g",
+          "quantity": 50
+        },
+        {
+          "name": "Hefe",
+          "unit": "Würfel",
+          "quantity": 0.25
+        },
+        {
+          "name": "Wasser, lauwarm",
+          "unit": "ml",
+          "quantity": 160
+        },
+        {
+          "name": "Salz",
+          "unit": "TL",
+          "quantity": 1
+        },
+        {
+          "name": "Olivenöl",
+          "unit": "EL",
+          "quantity": 2
+        },
+        {
+          "name": "Romatomaten",
+          "unit": "",
+          "quantity": 4
+        },
+        {
+          "name": "Oregano, getrocknet",
+          "unit": "TL",
+          "quantity": 1
+        },
+        {
+          "name": "Salz",
+          "unit": "TL",
+          "quantity": 0.25
+        },
+        {
+          "name": "Büffelmozzarella",
+          "unit": "Kugel",
+          "quantity": 1
+        }
+      ],
+      "preparation": "Zunächst für den Pizzateig Mehl, Grieß und Salz gründlich vermengen. Die Hefe im warmen Wasser auflösen, 5 Minuten ruhen lassen und dann zur Mehlmischung geben. Die Zutaten so lange mit dem Knethaken des Handrührers, in der Küchenmaschine oder von Hand kneten, bis ein elastischer Teig entsteht, das dauert ungefähr 10 Minuten. Falls der Teig zu fest sein sollte einfach noch etwas warmes Wasser zugeben, wenn der Teig zu flüssig ist, etwas Mehl hinzugeben. Erst dann das Olivenöl unterkneten.\n\nDen Teig in Frischhaltefolie wickeln oder unter einem Geschirrtuch mindestens 30 Minuten gehen lassen. Der Teig lässt sich ebenfalls hervorragend im Hefeteig-Programm eines Brotbackautomaten zubereiten.\n\nIn der Zwischenzeit die Roma-Tomaten quer halbieren und über einer feinen Reibe bis auf die Schale abreiben. Das überschüssige Wasser aus den Tomaten durch ein feines Sieb abgießen, so dass nur der Tomatensaft und das Innere der Tomaten übrig bleiben. Diese Tomaten nach Geschmack mit etwas Salz würzen.\n\nEin Backblech ordentlich mit gutem, erhitzbarem Olivenöl bepinseln und den Ofen auf 250°C Ober- und Unterhitze vorheizen. Den Teig nochmals von Hand durchkneten und auf einem bemehlten Brett etwa in Größe des Blechs von der Mitte nach außen ausrollen. Der Teig sollte dabei etwa 3 mm dick ausgerollt werden.\n\nDen ausgerollten Teig auf das Blech geben und nur hauchdünn (das ist wichtig!) mit den Tomaten bestreichen. Mit dem Oregano bestreuen. Die Chorizo in feine Stücke schneiden und auf der Pizza verteilen. Den Mozzarella von Hand in Stücke reißen und über die Pizza streuen.\n\nAuf der zweiten Einschubleiste von unten etwa 10 Minuten backen. Wer einen Pizzastein hat, kann sich das Backen auf dem Blech natürlich sparen und stattdessen zwei Runde Pizzen aus dem Teig formen.",
+      "level_of_difficulty": "Mittel",
+      "duration": {
+        "value": 30,
+        "unit": "Min."
+      }
+    },
+    {
+      "id": "2",
+      "name": "Pfannkuchen",
+      "img": "/recipe_pictures/pfannkuchen.jpg",
+      "portions": 4,
+      "lastEdited": "2024-07-02T08:16:04.477Z",
+      "duration": {
+        "unit": "Min.",
+        "value": 10
+      },
+      "level_of_difficulty": "Einfach",
+      "ingredients": [
+        {
+          "unit": "",
+          "quantity": 3,
+          "name": "Eier"
+        },
+        {
+          "unit": "ml",
+          "quantity": 750,
+          "name": "Milch"
+        },
+        {
+          "unit": "g",
+          "quantity": 400,
+          "name": "Mehl"
+        },
+        {
+          "unit": "Prise",
+          "quantity": 1,
+          "name": "Salz"
+        },
+        {
+          "unit": "EL",
+          "quantity": 4,
+          "name": "Fett für die Pfanne"
+        }
+      ],
+      "preparation": "Aus den Zutaten einen glatten Teig rühren, am besten mit der Küchenmaschine oder dem Handmixer. Dann den Teig rund 15 - 30 Minuten zugedeckt im Kühlschrank ruhen lassen.\n\nWährend das Fett in der Pfanne erhitzt wird, den Teig nochmal kurz durchrühren. Schöpflöffelweise den Pfannkuchenteig in die heiße Pfanne gießen. Die Unterseite stocken und goldbraun backen, dann vorsichtig wenden. Die zweite Seite ebenfalls goldbraun backen.\n\nDie fertigen Pfannkuchen im heißen Backofen (ca. 100 °C Ober und Unterhitze oder 80 °C Umluft) warm stellen, bis der gesamte Teig aufgebraucht ist.\n\nEntweder isst man die Pfannkuchen süß oder man wählt die herzhafte Variante."
+    },
+    {
+      "id": "3",
+      "name": "Tacos",
+      "img": "/recipe_pictures/tacos.jpg",
+      "portions": 4,
+      "lastEdited": "2024-07-02T08:16:04.477Z",
+      "duration": {
+        "unit": "Min.",
+        "value": 20
+      },
+      "level_of_difficulty": "Einfach",
+      "ingredients": [
+        {
+          "unit": "g",
+          "quantity": 100,
+          "name": "Gorgonzola"
+        },
+        {
+          "unit": "g",
+          "quantity": 100,
+          "name": "saure Sahne"
+        },
+        {
+          "unit": "EL",
+          "quantity": 6,
+          "name": "Orangensaft"
+        },
+        {
+          "unit": "",
+          "quantity": 1,
+          "name": "Salz"
+        },
+        {
+          "unit": "",
+          "quantity": 1,
+          "name": "Pfeffer"
+        },
+        {
+          "unit": "",
+          "quantity": 1,
+          "name": "Kopf Eisbergsalat"
+        },
+        {
+          "unit": "",
+          "quantity": 4,
+          "name": "Tomaten"
+        },
+        {
+          "unit": "g",
+          "quantity": 150,
+          "name": "Mais"
+        },
+        {
+          "unit": "",
+          "quantity": 4,
+          "name": "kleine Zwiebeln"
+        },
+        {
+          "unit": "",
+          "quantity": 1,
+          "name": "zehe Knoblauch"
+        },
+        {
+          "unit": "EL",
+          "quantity": 4,
+          "name": "Olivenöl"
+        },
+        {
+          "unit": "g",
+          "quantity": 400,
+          "name": "Hackfleisch vom Rind"
+        },
+        {
+          "unit": "g",
+          "quantity": 10,
+          "name": "Chillipulver"
+        },
+        {
+          "unit": "EL",
+          "quantity": 4,
+          "name": "Tomaten, püriert"
+        },
+        {
+          "unit": "g",
+          "quantity": 20,
+          "name": "Creme fraiche"
+        },
+        {
+          "unit": "",
+          "quantity": 8,
+          "name": "Tacos (Schalen)"
+        }
+      ],
+      "preparation": "Den Gorgonzola grob hacken, saure Sahne und Orangensaft dazugeben und mit dem Stabmixer pürieren. Mit Salz und Pfeffer abschmecken. Den Eisbergsalat waschen, trocknen, entstielen und fein würfeln. Den Mais abgießen und abtropfen lassen. Die Zwiebeln schälen und fein würfeln, den Knoblauch schälen und durchpressen. Das Olivenöl in einer Pfanne erhitzen, Zwiebeln und Knoblauch darin glasig schwitzen. Das Hackfleisch hinzufügen und kräftig durchbraten, mehrfach umrühren. Mit Salz, Pfeffer und Chilipulver würzen. Mais, pürierte Tomaten und die Creme fraiche unterrühren und nochmals abschmecken. Die Taco-Schalen nach Packungsanweisung im vorgeheizten Backofen erwärmen. Anschließend mit Salatstreifen und Hackfleischmasse füllen, die Käsecreme darüber geben. Mit Tomatenwürfeln bestreut servieren."
+    },
+    {
+      "id": "5",
+      "name": "Currywurst - Soße",
+      "img": "/recipe_pictures/currywurst.jpg",
+      "portions": 2,
+      "lastEdited": "2024-07-02T08:16:04.477Z",
+      "duration": {
+        "unit": "Min.",
+        "value": 5
+      },
+      "level_of_difficulty": "Einfach",
+      "ingredients": [
+        {
+          "unit": "g",
+          "quantity": 10,
+          "name": "Olivenöl"
+        },
+        {
+          "unit": "g",
+          "quantity": 120,
+          "name": "Tomatenketchup"
+        },
+        {
+          "unit": "g",
+          "quantity": 60,
+          "name": "Wasser"
+        },
+        {
+          "unit": "EL",
+          "quantity": 1,
+          "name": "Currypulver"
+        },
+        {
+          "unit": "TL",
+          "quantity": 0.5,
+          "name": "Cayennepfeffer"
+        },
+        {
+          "unit": "TL",
+          "quantity": 0.5,
+          "name": "Brühe, gekörnte"
+        },
+        {
+          "unit": "EL",
+          "quantity": 2,
+          "name": "Zucker"
+        },
+        {
+          "unit": "TL",
+          "quantity": 0.5,
+          "name": "Salz"
+        },
+        {
+          "unit": "Prise",
+          "quantity": 1,
+          "name": "Pfeffer"
+        }
+      ],
+      "preparation": "Öl, Tomatenketchup und Wasser in einem Topf vermischen und etwa 1 Min. bei starker Hitze kochen lassen. Die restlichen Zutaten hinzufügen und 3 Min. weiter köcheln lassen. Optional kann noch 1 TL Essig hinzugefügt werden.\n\nFür Leute, die es gerne schärfer mögen, kann man das Tomatenketchup teilweise durch scharfes Curry-/Chiliketchup ersetzen. Geht fix und schmeckt einfach köstlich zu einer Currywurst."
+    },
+    {
+      "id": "6",
+      "name": "Kohlrouladen",
+      "img": "/recipe_pictures/kohlrouladen.jpg",
+      "portions": 4,
+      "lastEdited": "2024-07-02T08:16:04.477Z",
+      "duration": {
+        "unit": "Min.",
+        "value": 50
+      },
+      "level_of_difficulty": "Mittel",
+      "ingredients": [
+        {
+          "unit": "",
+          "quantity": 1,
+          "name": "Wirsing oder Weißkohl"
+        },
+        {
+          "unit": "g",
+          "quantity": 100,
+          "name": "Speckwürfel"
+        },
+        {
+          "unit": "ml",
+          "quantity": 500,
+          "name": "Brühe"
+        },
+        {
+          "unit": "ml",
+          "quantity": 200,
+          "name": "Sahne"
+        },
+        {
+          "unit": "g",
+          "quantity": 500,
+          "name": "Hackfleisch"
+        },
+        {
+          "unit": "",
+          "quantity": 1,
+          "name": "Eier"
+        },
+        {
+          "unit": "",
+          "quantity": 1,
+          "name": "Brötchen, altbacken"
+        },
+        {
+          "unit": "EL",
+          "quantity": 1.5,
+          "name": "Senf"
+        },
+        {
+          "unit": "",
+          "quantity": 1,
+          "name": "Zwiebel"
+        },
+        {
+          "unit": "Prise",
+          "quantity": 1,
+          "name": "Salz"
+        },
+        {
+          "unit": "Prise",
+          "quantity": 1,
+          "name": "Pfeffer"
+        },
+        {
+          "unit": "Prise",
+          "quantity": 1,
+          "name": "Majoran"
+        }
+      ],
+      "preparation": "Acht schöne Blätter vom Wirsing oder Weißkohl ablösen und in kochendem Salzwasser blanchieren. In Eiswasser abschrecken und mit einem Küchentuch etwas trocknen.\n\nFür den Hackfleischteig das Brötchen in reichlich kaltem Wasser einweichen. Danach sehr gut ausdrücken. Hackfleisch, das Ei, das ausgedrückte Brötchen, 1 - 2 EL Senf, die fein gewürfelte Zwiebel, ordentlich Salz, Pfeffer und scharfes Paprikapulver in eine Schüssel geben. Zum Schluss nach Belieben noch getrockneten Majoran hineinstreuen. Alles gut vermengen.\n\nKleine Häufchen vom Hackfleischteig auf die ausgelegten Kohlblätter verteilen, zusammenrollen und mit Küchengarn zusammenbinden.\n\nDie Kohlrouladen in einer hohen Pfanne anbraten, sodass sie Farbe bekommen. Dabei auch die Speckwürfel mit auslassen. Haben die Kohlrouladen etwas Farbe angenommen, mit Brühe aufgießen. Zugedeckt eine halbe Stunde schmoren lassen. Zum Schluss die Rouladen herausnehmen. Sahne zur Soße geben, etwas einkochen lassen oder evtl. leicht abbinden. Mit wenig Salz und Pfeffer abschmecken und die Soße zu den Kohlrouladen servieren."
+    },
+    {
+      "id": "7",
+      "name": "Spaghetti Bolognese",
+      "img": "/recipe_pictures/spaghetti.jpg",
+      "portions": 4,
+      "lastEdited": "2024-07-02T08:16:04.477Z",
+      "duration": {
+        "unit": "Min.",
+        "value": 20
+      },
+      "level_of_difficulty": "Mittel",
+      "ingredients": [
+        {
+          "unit": "",
+          "quantity": 1,
+          "name": "Zwiebel"
+        },
+        {
+          "unit": "",
+          "quantity": 1,
+          "name": "Knoblauch, zehe"
+        },
+        {
+          "unit": "",
+          "quantity": 1,
+          "name": "Möhre"
+        },
+        {
+          "unit": "g",
+          "quantity": 500,
+          "name": "Rinderhackfleisch oder Tartar"
+        },
+        {
+          "unit": "ml",
+          "quantity": 200,
+          "name": "Gemüsebrühe (Instant)"
+        },
+        {
+          "unit": "Prise",
+          "quantity": 1,
+          "name": "Salz"
+        },
+        {
+          "unit": "Prise",
+          "quantity": 1,
+          "name": "Pfeffer"
+        },
+        {
+          "unit": "g",
+          "quantity": 70,
+          "name": "Tomatenmark"
+        },
+        {
+          "unit": "TL",
+          "quantity": 1,
+          "name": "Oregano"
+        },
+        {
+          "unit": "g",
+          "quantity": 400,
+          "name": "Tomaten, stückige, mit Kräutern"
+        },
+        {
+          "unit": "EL",
+          "quantity": 2,
+          "name": "Tomatenketchup"
+        },
+        {
+          "unit": "g",
+          "quantity": 500,
+          "name": "Spaghetti"
+        }
+      ],
+      "preparation": "Zwiebel, Knoblauch und Möhre schälen und in feine Würfel schneiden.\n\nHackfleisch in die Pfanne geben, langsam erhitzen und im eigenen Fett unter Rühren anbraten. Salzen und pfeffern. Zwiebeln, Knoblauch und Möhren dazugeben und kurz mitbraten. Mit der Brühe ablöschen. Dann Tomatenmark, Oregano, die stückigen Tomaten und Tomatenketchup unterrühren. Etwa 40 Minuten einkochen lassen.\n\nSpaghetti in Salzwasser bissfest kochen. Durch ein Sieb abgießen, mit kaltem Wasser abschrecken und zusammen mit der Sauce servieren.\n\nTipp: Die Sauce Bolognese schmeckt auch lecker zu Reis."
+    },
+    {
+      "id": "184f",
+      "name": "Butterbrot",
+      "img": "/recipe_pictures/default.jpg",
+      "portions": 1,
+      "lastEdited": "2024-09-26T13:15:43.938Z",
+      "duration": {
+        "value": 1,
+        "unit": "Minuten"
+      },
+      "level_of_difficulty": "Einfach",
+      "ingredients": [
+        {
+          "name": "Brot",
+          "unit": "",
+          "quantity": 1
+        },
+        {
+          "name": "Butter",
+          "unit": "Gramm",
+          "quantity": "15"
+        }
+      ],
+      "preparation": "Schmiere die Butter auf’s Brot."
+    },
+    {
+      "id": "9c9b",
+      "name": "mein neues Rezept",
+      "img": "/recipe_pictures/default.jpg",
+      "portions": 1,
+      "lastEdited": "2024-11-06T13:09:07.593Z",
+      "ingredients": [
+        {
+          "name": "Apfel",
+          "unit": "",
+          "quantity": 1
+        },
+        {
+          "name": "Birne",
+          "unit": "",
+          "quantity": 1
+        },
+        {
+          "name": "Mango",
+          "unit": "",
+          "quantity": 1
+        }
+      ],
+      "preparation": "Schmecken lassen!",
+      "level_of_difficulty": "Einfach",
+      "duration": {
+        "value": 0,
+        "unit": "Min."
+      }
+    }
+  ]
+}

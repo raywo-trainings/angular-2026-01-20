@@ -1,5 +1,9 @@
 <h2>Rezeptliste</h2>
 
+@if (error()) {
+  <div class="alert alert-danger">{{ error() }}</div>
+}
+
 <div class="grid-container">
   @for (recipe of recipes(); track recipe.id) {
     <!-- Property Binding [] - Event Binding () -->
