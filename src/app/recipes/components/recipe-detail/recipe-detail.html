@@ -1,0 +1,42 @@
+@let actualRecipe = recipe();
+
+@if (!actualRecipe) {
+  <div class="alert alert-danger" role="alert">
+    Rezept nicht gefunden
+  </div>
+} @else {
+  <div>
+    <img class="banner-image" src="{{actualRecipe.img}}" alt="Bild zum Rezept">
+
+    <h2>{{ actualRecipe.name }}</h2>
+
+    <div class="mb-2 mt-2">
+      <div class="badge">
+        <fa-icon [icon]="faClock"></fa-icon>
+        {{ actualRecipe.duration.value }} {{ actualRecipe.duration.unit }}
+      </div>
+
+      <div class="badge">
+        <fa-icon [icon]="faExclamation"></fa-icon>
+        {{ actualRecipe.difficulty }}
+      </div>
+    </div>
+
+    <h3>Zutaten</h3>
+
+    für {{ actualRecipe.servings }} Portionen
+
+    <ul class="ingredients">
+      @for (ingredient of actualRecipe.ingredients; track $index) {
+        <li>
+          <strong class="ingredient">{{ ingredient.name }}</strong>
+          <span class="quantity">{{ ingredient.quantity }} {{ ingredient.unit }}</span>
+        </li>
+      }
+    </ul>
+
+    <h3>Zubereitung</h3>
+    <p>{{ actualRecipe.preparation }}</p>
+
+  </div>
+}

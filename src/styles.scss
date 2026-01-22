@@ -70,19 +70,16 @@ main {
   margin-right: auto;
   margin-left: auto;
 }
-
 @media (min-width: 768px) {
   .container {
     width: 750px;
   }
 }
-
 @media (min-width: 992px) {
   .container {
     width: 970px;
   }
 }
-
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
@@ -120,6 +117,23 @@ main {
 
 .nav-headline {
   padding-left: 1rem;
+}
+
+.ingredients {
+  list-style-type: none;
+  padding: 1rem;
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  .ingredient {
+    font-weight: 400;
+    display: block;
+  }
+
+  .quantity {
+  }
 }
 
 .alert {
