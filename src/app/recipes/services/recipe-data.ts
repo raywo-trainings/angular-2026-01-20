@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {map, Observable} from 'rxjs';
 import {Recipe, recipeFromDto, recipeToDto} from '../models/recipe.model';
 import {RecipeDto} from '../models/recipeDto.model';
+import {environment} from '../../../environments/environment';
 
 
 @Injectable({
@@ -12,7 +13,7 @@ export class RecipeData {
 
   readonly #http = inject(HttpClient);
 
-  #baseUrl = 'http://localhost:3001/recipes';
+  #baseUrl = environment.apiUrl;
 
 
   public getAllRecipes(): Observable<Recipe[]> {
@@ -48,10 +49,10 @@ export class RecipeData {
 
   private url(idOrRecipe?: string | Recipe): string {
     if (!idOrRecipe) {
-      return this.#baseUrl;
+      return `${this.#baseUrl}/recipes`;
     }
 
-    return `${this.#baseUrl}${this.getIdentifier(idOrRecipe) ? `/${this.getIdentifier(idOrRecipe)}` : ''}`;
+    return `${this.#baseUrl}/recipes${this.getIdentifier(idOrRecipe) ? `/${this.getIdentifier(idOrRecipe)}` : ''}`;
   }
 
 
