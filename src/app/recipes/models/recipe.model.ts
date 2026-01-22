@@ -32,5 +32,23 @@ export function recipeFromDto(dto: RecipeDto): Recipe {
     lastEdited: dto.lastEdited,
     ingredients: dto.ingredients,
     preparation: dto.preparation
-  }
+  };
+}
+
+
+export function recipeToDto(recipe: Recipe): RecipeDto {
+  return {
+    id: recipe.id,
+    name: recipe.name,
+    img: recipe.img,
+    level_of_difficulty: recipe.difficulty,
+    duration: {
+      value: recipe.duration.value,
+      unit: recipe.duration.unit
+    },
+    portions: recipe.servings,
+    lastEdited: recipe.lastEdited,
+    ingredients: recipe.ingredients,
+    preparation: recipe.preparation
+  };
 }
