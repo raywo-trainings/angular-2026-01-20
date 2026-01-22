@@ -3,9 +3,10 @@ import {Ingredient} from './ingredients.model';
 import {Duration} from './duration.model';
 import {RecipeDto} from './recipeDto.model';
 import {TimeUnit} from './time-unit.model';
+import {Identifiable} from '../../shared/models/identifiable.model';
 
 
-export interface Recipe {
+export interface Recipe extends Identifiable {
   id: string;
   name: string;
   img: string;
