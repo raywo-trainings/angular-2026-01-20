@@ -2,7 +2,8 @@
 
 <div class="grid-container">
   @for (recipe of recipes(); track recipe.id) {
-    <!-- Property Binding -->
-    <app-recipe-card [recipe]="recipe"/>
+    <!-- Property Binding [] - Event Binding () -->
+    <app-recipe-card [recipe]="recipe"
+                     (deleted)="onRecipeDeleted($event)"/>
   }
 </div>

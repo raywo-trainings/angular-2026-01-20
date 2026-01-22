@@ -12,7 +12,7 @@ export class RecipeData {
 
   readonly #http = inject(HttpClient);
 
-  #baseUrl = "http://localhost:3001/recipes";
+  #baseUrl = 'http://localhost:3001/recipes';
 
 
   public getAllRecipes(): Observable<Recipe[]> {
@@ -22,9 +22,15 @@ export class RecipeData {
       );
   }
 
+
   public getRecipe(id: string): Observable<Recipe> {
     return this.#http.get<RecipeDto>(`${this.#baseUrl}/${id}`)
       .pipe(map(dto => recipeFromDto(dto)));
+  }
+
+
+  public deleteRecipe(id: string): Observable<void> {
+    return this.#http.delete<void>(`${this.#baseUrl}/${id}`);
   }
 
 }

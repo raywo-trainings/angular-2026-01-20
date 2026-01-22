@@ -19,6 +19,23 @@ export class RecipeList implements OnInit {
 
 
   public ngOnInit() {
+    this.fetchAllRecipes();
+  }
+
+
+  protected onRecipeDeleted(recipe: Recipe) {
+    this.dataService.deleteRecipe(recipe.id)
+      // .subscribe(() => this.fetchAllRecipes());
+      .subscribe(() => {
+        const newRecipes = this
+          .recipes()
+          .filter(r => r.id !== recipe.id);
+        this.recipes.set(newRecipes);
+      })
+  }
+
+
+  private fetchAllRecipes() {
     this.dataService.getAllRecipes()
       .subscribe(recipes => this.recipes.set(recipes));
   }

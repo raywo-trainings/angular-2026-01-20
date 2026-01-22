@@ -1,4 +1,4 @@
-import {Component, input} from '@angular/core';
+import {Component, input, output} from '@angular/core';
 import {Recipe} from '../../models/recipe.model';
 
 
@@ -11,5 +11,11 @@ import {Recipe} from '../../models/recipe.model';
 export class RecipeCard {
 
   public recipe = input.required<Recipe>();
+  public deleted = output<Recipe>();
+
+
+  protected onDeleteClick() {
+    this.deleted.emit(this.recipe());
+  }
 
 }

@@ -10,5 +10,10 @@
   <div class="card-body">
     <p><strong>Schwierigkeit:</strong> {{ recipe().difficulty }}</p>
     <p><strong>Dauer:</strong> {{ recipe().duration.value }} {{ recipe().duration.unit }}</p>
+
+    <button class="btn btn-primary"
+            (click)="onDeleteClick()">
+      Löschen
+    </button>
   </div>
 </div>
