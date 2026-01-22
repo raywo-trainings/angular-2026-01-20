@@ -1,8 +1,8 @@
 <h2>Rezeptliste</h2>
 
 <div class="grid-container">
-  @for (recipe of dataService.recipes; track recipe.id) {
-    <!--    Property Binding-->
+  @for (recipe of recipes(); track recipe.id) {
+    <!-- Property Binding -->
     <app-recipe-card [recipe]="recipe"/>
   }
 </div>
