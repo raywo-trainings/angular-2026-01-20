@@ -1,0 +1,142 @@
+<h1>Neues Rezept</h1>
+
+<form class="form"
+      [formGroup]="recipeForm"
+      (ngSubmit)="submitForm()">
+  <div class="flex-container flex-align-items-start">
+    <div class="form-group flex-grow-1">
+      <label for="recipeName">Rezept Name</label>
+      <input id="recipeName"
+             class="form-control"
+             formControlName="name">
+      <div class="error-feedback">
+        Bitte gib einen Namen ein, der mindestens 3 Zeichen und höchstens 50 Zeichen lang ist.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="recipeServings">Anzahl Portionen</label>
+      <input id="recipeServings"
+             class="form-control"
+             type="number"
+             formControlName="servings">
+      <div class="error-feedback">
+        Bitte gib eine Anzahl an Portionen an.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="recipeDifficultyLevel">Schwierigkeitsgrad</label>
+      <select id="recipeDifficultyLevel" formControlName="difficulty">
+        @for (difficultyOption of difficultyOptions; track $index) {
+          <option [value]="difficultyOption.value">
+            {{ difficultyOption.label }}
+          </option>
+        }
+      </select>
+      <div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex-container flex-align-items-start"
+       [formGroup]="recipeForm.controls.duration">
+    <div class="form-group">
+      <label for="recipeDuration">Dauer</label>
+      <input id="recipeDuration"
+             class="form-control"
+             type="number"
+             formControlName="value">
+      <div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="recipeDurationUnit">Einheit</label>
+      <select id="recipeDurationUnit"
+              formControlName="unit">
+        @for (timeUnitOption of timeUnitOptions; track $index) {
+          <option [value]="timeUnitOption.value">
+            {{ timeUnitOption.label }}
+          </option>
+        }
+      </select>
+    </div>
+  </div>
+
+  <h2>Zutaten:</h2>
+
+  <ng-container formArrayName="ingredients">
+    @for (ingredientForm of recipeForm.controls.ingredients.controls; track $index) {
+      <div class="flex-container flex-align-items-start"
+           [formGroup]="ingredientForm">
+        <div class="form-group flex-grow-1">
+          <label for="ingredientName-{{$index}}">Zutat</label>
+          <input id="ingredientName-{{$index}}"
+                 class="form-control"
+                 formControlName="name">
+          <div>
+          </div>
+        </div>
+
+        <div class="flex-container">
+          <div class="form-group">
+            <label>Anzahl</label>
+            <input class="form-control"
+                   type="number"
+                   formControlName="quantity">
+            <div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Einheit</label>
+            <select formControlName="unit">
+              @for (portionUnitOption of portionUnitOptions; track $index) {
+                <option [value]="portionUnitOption.value">
+                  {{ portionUnitOption.label }}
+                </option>
+              }
+            </select>
+            <div>
+            </div>
+          </div>
+        </div>
+        @if ($index > 1) {
+          <button type="button"
+                  class="btn btn-danger ms-2"
+                  (click)="removeIngredientFormGroup($index)">
+            Löschen
+          </button>
+        }
+      </div>
+    }
+
+    <div class="pd-b-sm">
+      <button type="button"
+              class="btn btn-secondary"
+              (click)="addIngredientFormGroup()">
+        Weitere Zutat
+      </button>
+    </div>
+  </ng-container>
+
+  <div class="form-group">
+    <label for="recipePreparation">Zubereitung</label>
+    <textarea id="recipePreparation"
+              class="w-100 form-control"
+              rows="7"
+              formControlName="preparation">
+      </textarea>
+    <div>
+    </div>
+  </div>
+
+  <div class="pd-y-sm">
+    <button type="submit"
+            class="btn btn-primary"
+            [disabled]="recipeForm.invalid">
+      Speichern
+    </button>
+  </div>
+</form>

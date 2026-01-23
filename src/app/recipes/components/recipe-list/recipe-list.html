@@ -1,4 +1,9 @@
-<h2>Rezeptliste</h2>
+<div class="flex-container  flex-justify-content-between">
+  <h2>Rezeptliste</h2>
+  <a [routerLink]="['/recipes', 'new']" class="btn btn-primary">
+    Neues Rezept
+  </a>
+</div>
 
 @if (error()) {
   <div class="alert alert-danger">{{ error() }}</div>

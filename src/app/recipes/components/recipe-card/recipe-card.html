@@ -17,6 +17,11 @@
       Löschen
     </button>
 
+    <a [routerLink]="['/recipes', recipe().id, 'edit']"
+       class="btn btn-secondary">
+      Bearbeiten
+    </a>
+
     <a [routerLink]="['/recipes', recipe().id]"
        class="btn btn-secondary">
       Details

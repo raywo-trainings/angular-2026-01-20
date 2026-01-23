@@ -2,12 +2,14 @@ import {Component, inject, OnInit, signal} from '@angular/core';
 import {RecipeCard} from '../recipe-card/recipe-card';
 import {RecipeData} from '../../services/recipe-data';
 import {Recipe} from '../../models/recipe.model';
+import {RouterLink} from '@angular/router';
 
 
 @Component({
   selector: 'app-recipe-list',
   imports: [
-    RecipeCard
+    RecipeCard,
+    RouterLink
   ],
   templateUrl: './recipe-list.html',
   styleUrl: './recipe-list.scss'

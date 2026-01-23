@@ -99,6 +99,14 @@ main {
   align-items: center;
 }
 
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
 .flex-nowrap {
   flex-wrap: nowrap;
 }
@@ -109,6 +117,14 @@ main {
 
 .flex-justify-content-between {
   justify-content: space-between;
+}
+
+.flex-align-items-center {
+  align-items: center;
+}
+
+.flex-align-items-start {
+  align-items: flex-start;
 }
 
 .flex-grow-1 {
