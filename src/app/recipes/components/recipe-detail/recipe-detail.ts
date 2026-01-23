@@ -4,12 +4,14 @@ import {Recipe} from '../../models/recipe.model';
 import {FaIconComponent} from '@fortawesome/angular-fontawesome';
 import {faClock} from '@fortawesome/free-regular-svg-icons';
 import {faExclamation} from '@fortawesome/free-solid-svg-icons';
+import {Router, RouterLink} from '@angular/router';
 
 
 @Component({
   selector: 'app-recipe-detail',
   imports: [
-    FaIconComponent
+    FaIconComponent,
+    RouterLink
   ],
   templateUrl: './recipe-detail.html',
   styleUrl: './recipe-detail.scss',
@@ -17,6 +19,7 @@ import {faExclamation} from '@fortawesome/free-solid-svg-icons';
 export class RecipeDetail {
 
   readonly #dataService = inject(RecipeData);
+  readonly #router = inject(Router);
 
   protected recipe = signal<Recipe | null>(null);
   protected readonly faClock = faClock;
@@ -35,6 +38,14 @@ export class RecipeDetail {
           error: () => this.recipe.set(null)
         });
     });
+  }
+
+
+  protected onDelete() {
+    this.#dataService.deleteRecipe(this.recipeId())
+      .subscribe(() => {
+        void this.#router.navigate(['recipes']);
+      });
   }
 
 }

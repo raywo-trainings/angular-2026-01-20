@@ -3,7 +3,7 @@
     {
       "id": "1",
       "name": "Pizza",
-      "img": "/recipe_pictures/default.jpg",
+      "img": "/recipe_pictures/pizza.jpg",
       "portions": 4,
       "lastEdited": "2024-11-06T15:07:39.516Z",
       "ingredients": [

@@ -38,5 +38,13 @@
     <h3>Zubereitung</h3>
     <p>{{ actualRecipe.preparation }}</p>
 
+    <a [routerLink]="['/recipes', actualRecipe.id, 'edit']" class="btn btn-primary">
+      Rezept bearbeiten
+    </a>
+
+    <button class="btn btn-danger" (click)="onDelete()">
+      Rezept löschen
+    </button>
+
   </div>
 }
