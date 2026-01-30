@@ -11,11 +11,11 @@ import {url} from '../../shared/helper/id.helper';
 })
 export class RecipeData {
 
-  readonly #http = inject(HttpClient);
+  private readonly http = inject(HttpClient);
 
 
   public getAllRecipes(): Observable<Recipe[]> {
-    return this.#http.get<RecipeDto[]>(url())
+    return this.http.get<RecipeDto[]>(url())
       .pipe(
         map(recipeDtos => recipeDtos.map(dto => recipeFromDto(dto)))
       );
@@ -23,25 +23,28 @@ export class RecipeData {
 
 
   public getRecipe(id: string): Observable<Recipe> {
-    return this.#http.get<RecipeDto>(url(id))
-      .pipe(map(dto => recipeFromDto(dto)));
+    return this.http.get<RecipeDto>(url(id))
+      .pipe(
+        map(dto => recipeFromDto(dto)),
+        // delay(3000)
+      );
   }
 
 
   public createRecipe(recipe: Recipe): Observable<Recipe> {
-    return this.#http.post<RecipeDto>(url(), recipeToDto(recipe))
+    return this.http.post<RecipeDto>(url(), recipeToDto(recipe))
       .pipe(map(dto => recipeFromDto(dto)));
   }
 
 
   public updateRecipe(recipe: Recipe): Observable<Recipe> {
-    return this.#http.put<RecipeDto>(url(recipe), recipeToDto(recipe))
+    return this.http.put<RecipeDto>(url(recipe), recipeToDto(recipe))
       .pipe(map(dto => recipeFromDto(dto)));
   }
 
 
   public deleteRecipe(id: string): Observable<void> {
-    return this.#http.delete<void>(url(id));
+    return this.http.delete<void>(url(id));
   }
 
 }

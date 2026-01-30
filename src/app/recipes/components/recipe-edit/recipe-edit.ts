@@ -21,9 +21,9 @@ import {distinctUntilChanged, filter, switchMap} from 'rxjs';
 })
 export class RecipeEdit {
 
-  readonly #formBuilder = inject(NonNullableFormBuilder);
-  readonly #recipeService = inject(RecipeData);
-  readonly #router = inject(Router);
+  private readonly formBuilder = inject(NonNullableFormBuilder);
+  private readonly recipeService = inject(RecipeData);
+  private readonly router = inject(Router);
 
   protected readonly timeUnitOptions = timeUnitOptions;
   protected readonly difficultyOptions = difficultyOptions;
@@ -42,7 +42,7 @@ export class RecipeEdit {
 
 
   private createIngredientFormGroup(): FormGroup<IngredientForm> {
-    return this.#formBuilder.group({
+    return this.formBuilder.group({
       name: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(50)]],
       unit: [PortionUnits.NONE],
       quantity: [1, [Validators.required, Validators.min(0.1)]],
@@ -71,23 +71,23 @@ export class RecipeEdit {
       lastEdited: new Date().toISOString(),
     } as Recipe;
 
-    this.#recipeService.createRecipe(recipe)
+    this.recipeService.createRecipe(recipe)
       .subscribe(() => {
-        void this.#router.navigate(['recipes']);
+        void this.router.navigate(['recipes']);
       });
   }
 
 
   private createRecipeForm(): FormGroup<RecipeForm> {
-    return this.#formBuilder.group({
+    return this.formBuilder.group({
       name: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(50)]],
       servings: [1, [Validators.required, Validators.min(1), Validators.max(10)]],
-      duration: this.#formBuilder.group({
+      duration: this.formBuilder.group({
         value: [5, [Validators.required, Validators.min(0), Validators.max(24)]],
         unit: [TimeUnit.MINUTES, [Validators.required]],
       }),
       difficulty: [Difficulty.EASY, [Validators.required]],
-      ingredients: this.#formBuilder.array([
+      ingredients: this.formBuilder.array([
         this.createIngredientFormGroup(),
         this.createIngredientFormGroup()
       ]),
@@ -101,7 +101,7 @@ export class RecipeEdit {
       .pipe(
         distinctUntilChanged(),
         filter(id => id !== undefined && id !== null),
-        switchMap(id => this.#recipeService.getRecipe(id)),
+        switchMap(id => this.recipeService.getRecipe(id)),
       )
       .subscribe(recipe => {
         this.recipeToEdit = recipe;

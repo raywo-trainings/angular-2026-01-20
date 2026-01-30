@@ -1,10 +1,10 @@
-import {Component, effect, inject, input, signal} from '@angular/core';
+import {Component, inject, input} from '@angular/core';
 import {RecipeData} from '../../services/recipe-data';
-import {Recipe} from '../../models/recipe.model';
 import {FaIconComponent} from '@fortawesome/angular-fontawesome';
 import {faClock} from '@fortawesome/free-regular-svg-icons';
 import {faExclamation} from '@fortawesome/free-solid-svg-icons';
 import {Router, RouterLink} from '@angular/router';
+import {rxResource} from '@angular/core/rxjs-interop';
 
 
 @Component({
@@ -18,33 +18,24 @@ import {Router, RouterLink} from '@angular/router';
 })
 export class RecipeDetail {
 
-  readonly #dataService = inject(RecipeData);
-  readonly #router = inject(Router);
+  private readonly dataService = inject(RecipeData);
+  private readonly router = inject(Router);
 
-  protected recipe = signal<Recipe | null>(null);
+  protected readonly recipe = rxResource({
+    params: () => ({id: this.recipeId()}),
+    stream: ({params}) => this.dataService.getRecipe(params.id)
+  });
+
   protected readonly faClock = faClock;
   protected readonly faExclamation = faExclamation;
 
-  public recipeId = input.required<string>();
-
-
-  constructor() {
-    effect(() => {
-      const id = this.recipeId();
-
-      this.#dataService.getRecipe(id)
-        .subscribe({
-          next: recipe => this.recipe.set(recipe),
-          error: () => this.recipe.set(null)
-        });
-    });
-  }
+  public readonly recipeId = input.required<string>();
 
 
   protected onDelete() {
-    this.#dataService.deleteRecipe(this.recipeId())
+    this.dataService.deleteRecipe(this.recipeId())
       .subscribe(() => {
-        void this.#router.navigate(['recipes']);
+        void this.router.navigate(['recipes']);
       });
   }
 

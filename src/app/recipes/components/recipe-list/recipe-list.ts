@@ -17,8 +17,8 @@ import {RouterLink} from '@angular/router';
 export class RecipeList implements OnInit {
 
   protected readonly dataService = inject(RecipeData);
-  protected recipes = signal<Recipe[]>([]);
-  protected error = signal<string | null>(null);
+  protected readonly recipes = signal<Recipe[]>([]);
+  protected readonly error = signal<string | null>(null);
 
 
   public ngOnInit() {

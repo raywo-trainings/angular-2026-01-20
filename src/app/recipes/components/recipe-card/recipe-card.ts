@@ -13,8 +13,8 @@ import {RouterLink} from '@angular/router';
 })
 export class RecipeCard {
 
-  public recipe = input.required<Recipe>();
-  public deleted = output<Recipe>();
+  public readonly recipe = input.required<Recipe>();
+  public readonly deleted = output<Recipe>();
 
 
   protected onDeleteClick() {
